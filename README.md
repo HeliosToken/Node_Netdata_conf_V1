@@ -17,7 +17,7 @@ Before running this script, you will need the following:
     - A Netdata configuration file (`netdata.conf`).
     - A Netdata stream configuration file (`stream.conf`).
 
-Usage
+## Usage
 1. Running the Script
 Ensure the script is executable:
 
