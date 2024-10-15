@@ -22,7 +22,6 @@ Before running this script, you will need the following:
 Ensure the script is executable:
 
 ```bash
-Copy code
 chmod +x install.sh
 ```
 Run the script by passing the three configuration files as arguments:
