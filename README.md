@@ -78,6 +78,8 @@ WireGuard: A fast, modern VPN tunnel.
 Netdata: A powerful real-time monitoring tool.
 If these are not already installed, the script will install them for you.
 
+----------------------------------------------------------------------------------------------------------------------
+
 ## Manual Installation
 To manually install these dependencies, use the following commands:
 
