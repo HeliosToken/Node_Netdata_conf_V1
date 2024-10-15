@@ -18,8 +18,7 @@ Before running this script, you will need the following:
     - A Netdata stream configuration file (`stream.conf`).
 
 ## Usage
-1. Running the Script:
-Ensure the script is executable:
+1. Running the Script: 
 
 ```bash
 chmod +x install.sh
