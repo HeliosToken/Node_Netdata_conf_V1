@@ -51,8 +51,7 @@ When WireGuard is enabled as a system service (`wg-quick@wg0.service`), it autom
 
 Solution
 This script uses the following command to start WireGuard without enabling it on boot:
-```
-bash
+```bash
 Copy code
 sudo wg-quick up wg0
 ```
@@ -64,21 +63,18 @@ This approach allows you to safely test and troubleshoot your WireGuard setup wi
 
 # Manually Enabling WireGuard at Boot
 Once you are confident the WireGuard configuration is correct, you can enable it to start automatically at boot:
-```
-bash
+```bash
 Copy code
 sudo systemctl enable wg-quick@wg0
 ```
 If you need to disable WireGuard from starting at boot (e.g., after fixing a misconfiguration):
-```
-bash
+```bash
 Copy code
 sudo systemctl disable wg-quick@wg0
 ```
 # Restarting WireGuard Service
 If you need to manually restart the WireGuard service after updating the configuration:
-```
-bash
+```bash
 Copy code
 sudo wg-quick down wg0
 sudo wg-quick up wg0
@@ -94,15 +90,13 @@ If these are not already installed, the script will install them for you.
 To manually install these dependencies, use the following commands:
 
 # Installing WireGuard
-```
-bash
+```bash
 Copy code
 sudo apt-get update
 sudo apt-get install -y wireguard
 ```
 Installing Netdata
-```
-bash
+```bash
 Copy code
 curl -o netdata-kickstart.sh https://raw.githubusercontent.com/netdata/netdata/master/packaging/installer/kickstart.sh
 chmod +x netdata-kickstart.sh
@@ -110,8 +104,7 @@ sudo ./netdata-kickstart.sh
 ```
 Netdata Configuration
 To configure Netdata, the script copies the provided netdata.conf and stream.conf to the appropriate directories and restarts the Netdata service:
-```
-bash
+```bash
 Copy code
 sudo systemctl restart netdata
 ```
@@ -128,8 +121,7 @@ Ensure that you pass the correct paths to the configuration files. The script wi
 
 ## Permission Issues
 Ensure you are running the script with sufficient permissions. You may need to prefix the script with sudo if necessary:
-```
-bash
+```bash
 Copy code
 sudo ./install.sh <WG_CONFIG_FILE> <STREAM_CONFIG_FILE> <NETDATA_CONFIG_FILE>
 ```
