@@ -101,20 +101,29 @@ sudo systemctl restart netdata
 ```
 This ensures that Netdata is configured to monitor the system and stream data based on the provided configuration files.
 
+----------------------------------------------------------------------------------------------
+
 ## Output
 Once the script is successfully run:
 
 WireGuard will be configured with the given wg0.conf file and started.
 Netdata will be installed and configured with the provided configuration files (netdata.conf and stream.conf).
+
+---------------
+
 ## Troubleshooting
 File Not Found Error
 Ensure that you pass the correct paths to the configuration files. The script will exit if it does not find the specified files.
+
+-------------------
 
 ## Permission Issues
 Ensure you are running the script with sufficient permissions. You may need to prefix the script with sudo if necessary:
 ```bash
 sudo ./install.sh <WG_CONFIG_FILE> <STREAM_CONFIG_FILE> <NETDATA_CONFIG_FILE>
 ```
-# License
+-------------------
+
+## License
 This project is open-source. Feel free to modify it as per your needs.
 
